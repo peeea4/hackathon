@@ -2,7 +2,7 @@ import { createRoot } from "react-dom/client";
 import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
 
-import { Layout } from "./pages/Layout";
+import { App } from "./pages/App";
 import { store } from "./store";
 import { GlobalStyles } from "./styles";
 
@@ -14,7 +14,7 @@ root.render(
     <Provider store={store}>
         <BrowserRouter>
             <GlobalStyles />
-            <Layout />
+            <App />
         </BrowserRouter>
     </Provider>,
 );

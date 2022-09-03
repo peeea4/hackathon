@@ -1,14 +1,16 @@
-import { AddProduct } from "../AddProduct";
-import { Home } from "../Home";
-import { Profile } from "../Profile";
+import { Outlet } from "react-router-dom";
+
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+
 import { LayoutWrapper } from "./styled";
 
 export const Layout = () => {
     return (
         <LayoutWrapper>
-            <Home />
-            <Profile />
-            <AddProduct />
+            <Header />
+            <Outlet />
+            <Footer />
         </LayoutWrapper>
     );
 };

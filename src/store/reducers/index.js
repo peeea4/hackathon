@@ -1,3 +1,9 @@
 import { combineReducers } from "redux";
 
-export const rootReducer = combineReducers({});
+import { productReducer } from "./product";
+import { userReducer } from "./user";
+
+export const rootReducer = combineReducers({
+    productList: productReducer,
+    userState: userReducer,
+});

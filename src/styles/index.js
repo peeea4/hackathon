@@ -1,5 +1,22 @@
 import { createGlobalStyle } from "styled-components";
 
+export const BG_COLOR = {
+    button: "#1f7d63",
+    navbar: "#f7f7f7",
+};
+
+export const FONT_COLOR = {
+    button: "#1f7d63",
+};
+
+export const FONT_SIZE = {
+    nav: "16px",
+};
+
+export const BORDER = {
+    button: "#1f7d63",
+};
+
 export const GlobalStyles = createGlobalStyle`
 * {
 
@@ -31,13 +48,13 @@ export const GlobalStyles = createGlobalStyle`
 }
 
 html, body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 }
 
 body {  
     & > #root {
-        width: 100%;
+        width: 100%;    
         height: 100%;
     }
 }
