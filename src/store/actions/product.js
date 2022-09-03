@@ -9,40 +9,32 @@ import {
     GET_USER_PRODUCT,
     SET_PRODUCT,
 } from "@/constants/actions";
+import { url } from "@/constants/url";
 
 export const getProductList = () => {
     return async (dispatch) => {
-        const response = await axios.get(
-            "http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/getAllProducts",
-        );
-        console.log(response, "action");
+        const response = await axios.get(`${url}/product/getAllProducts`);
         dispatch({ type: GET_PRODUCT_LIST, payload: response.data });
     };
 };
 
 export const getProductById = (id) => {
     return async (dispatch) => {
-        const response = await axios.get(
-            `http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/getProductById/${id}`,
-        );
+        const response = await axios.get(`${url}/product/getProductById/${id}`);
         dispatch({ type: GET_ID_PRODUCT, payload: response.data });
     };
 };
 
 export const getProductByUser = () => {
     return async (dispatch) => {
-        const response = await axios.get(
-            "http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/getUserProduct/",
-        );
+        const response = await axios.get(`${url}/product/getUserProduct/`);
         dispatch({ type: GET_USER_PRODUCT, payload: response.data });
     };
 };
 
 export const getProductByCategory = (category) => {
     return async (dispatch) => {
-        const response = await axios.get(
-            `http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/getCategoryProduct/${category}`,
-        );
+        const response = await axios.get(`${url}/product/getCategoryProduct/${category}`);
         dispatch({ type: GET_CATEGORY_PRODUCT, payload: response.data });
     };
 };
@@ -50,28 +42,21 @@ export const getProductByCategory = (category) => {
 export const getProductByFilter = (filter) => {
     console.log(filter);
     return async (dispatch) => {
-        const response = await axios.get(
-            `http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/productStartWith/${filter}`,
-        );
+        const response = await axios.get(`${url}/product/productStartWith/${filter}`);
         dispatch({ type: GET_FILTERED_LIST, payload: response.data });
     };
 };
 
 export const deleteProduct = (id) => {
     return async (dispatch) => {
-        const response = await axios.post(
-            `http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/deleteProduct/${id}`,
-        );
+        const response = await axios.post(`${url}/product/deleteProduct/${id}`);
         dispatch({ type: DELETE_ID_PRODUCT, payload: response.data });
     };
 };
 
 export const addProduct = (product) => {
     return async (dispatch) => {
-        const response = await axios.post(
-            "http://ec2-18-185-127-15.eu-central-1.compute.amazonaws.com:8080/product/save",
-            product,
-        );
+        const response = await axios.post(`${url}/product/save`, product);
         dispatch({ type: SET_PRODUCT, payload: response.data });
     };
 };

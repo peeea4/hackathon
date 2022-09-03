@@ -1,12 +1,21 @@
 import styled from "styled-components";
 
-export const ProfileWrapper = styled.div``;
+export const ProfileWrapper = styled.div`
+    width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    
+`;
 
 export const UserInfo = styled.div``;
 
 export const MyProducts = styled.div``;
 
-export const Avatar = styled.img``;
+export const Avatar = styled.div`
+    background-color: gray;
+    width: 120px;   
+    height: 120px;
+`;
 
 export const Name = styled.p``;
 
@@ -79,7 +88,8 @@ export const EmailContainer = styled.div`
         left: 10px;
         font-size: 14px;
         background-color: white;
-    }`;
+    }
+`;
 
 export const UserPasswordContainer = styled.div`
     position: relative;
@@ -89,7 +99,8 @@ export const UserPasswordContainer = styled.div`
         left: 10px;
         font-size: 14px;
         background-color: white;
-    }`;
+    }
+`;
 
 export const FirstNameContainer = styled.div`
     position: relative;
@@ -99,7 +110,8 @@ export const FirstNameContainer = styled.div`
         left: 10px;
         font-size: 14px;
         background-color: white;
-    }`;
+    }
+`;
 
 export const LastNameContainer = styled.div`
     position: relative;
@@ -109,7 +121,8 @@ export const LastNameContainer = styled.div`
         left: 10px;
         font-size: 14px;
         background-color: white;
-    }`;
+    }
+`;
 
 export const PhoneNumberContainer = styled.div`
     position: relative;
@@ -119,4 +132,7 @@ export const PhoneNumberContainer = styled.div`
         left: 10px;
         font-size: 14px;
         background-color: white;
-    }`;
+    }
+`;
+
+export const Btn = styled.button``;

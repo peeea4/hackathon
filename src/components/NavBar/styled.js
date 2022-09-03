@@ -15,8 +15,8 @@ export const NavBarWrapper = styled.nav`
         color: black;
         text-decoration: none;
         font-weight: 500;
-        &:active {
-            color: ${BG_COLOR.button};
+        .active {
+            background-color: red;
         }
     }
 `;

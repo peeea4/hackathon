@@ -26,7 +26,9 @@ export const Category = styled.p``;
 
 export const Loaction = styled.p``;
 
-export const Description = styled.p``;
+export const Description = styled.p`
+    margin-top: 4px;
+`;
 
 export const Buy = styled.button`
     background-color: ${BG_COLOR.button};

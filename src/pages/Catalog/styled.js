@@ -2,10 +2,12 @@ import styled from "styled-components";
 
 export const CatalogWrapper = styled.div`
     width: 1400px;
-    margin: 0 auto;
+    margin: 20px auto;
 `;
 
 export const List = styled.div`
     display: flex;
     flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 20px;
 `;
