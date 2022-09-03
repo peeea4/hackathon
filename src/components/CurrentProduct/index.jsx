@@ -14,13 +14,14 @@ export const CurrentProduct = () => {
     const clickHandler = () => {
         dispath(setProduct(null, false));
     };
+
     return (
         <CurrentProductWrapper>
             <CurrentProductModal id="modal-photo">
                 <Image src={IMAGES[currentProduct.namePicture]} />
                 <Title>{currentProduct.title}</Title>
                 <Description>{currentProduct.description}</Description>
-                <PhoneNumber >{currentProduct.user.phoneNumber}</PhoneNumber>
+                <PhoneNumber>{currentProduct.user.phoneNumber}</PhoneNumber>
             </CurrentProductModal>
             <BtnClose onClick={clickHandler}>Close</BtnClose>
         </CurrentProductWrapper>

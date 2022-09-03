@@ -13,8 +13,6 @@ import {
     FirstNameContainer,
     LastName,
     LastNameContainer,
-    Location,
-    MyProducts,
     Name,
     PhoneNumber,
     PhoneNumberContainer,
@@ -29,7 +27,8 @@ import {
 export const Profile = () => {
     const user = useSelector((state) => state.userState.user);
     console.log(user);
-    const userProducts = useSelector((state) => state.userState.userProducts);
+    const userProducts = useSelector((state) => state.userState);
+    console.log(userProducts);
     const dispatch = useDispatch();
     const [isRegister, setIsRegister] = useState(true);
 
@@ -53,8 +52,9 @@ export const Profile = () => {
                 <Avatar></Avatar>
                 <Name>{user.username}</Name>
             </UserInfo>
+            {/* <MyProducts>{userProducts.map((product) => console.log(product))}</MyProducts> */}
         </ProfileWrapper>
-    ) : isRegister ? (
+    ) : !isRegister ? (
         <AuthWrapper>
             <EmailContainer>
                 <p>Email</p>
@@ -62,7 +62,7 @@ export const Profile = () => {
             </EmailContainer>
             <UserPasswordContainer>
                 <p>Password</p>
-                <UserPassword onChange={(e) => setPassword(e.target.value)} />
+                <UserPassword type="password" onChange={(e) => setPassword(e.target.value)} />
             </UserPasswordContainer>
             <UserNameContainer>
                 <p>User Name</p>
@@ -82,7 +82,7 @@ export const Profile = () => {
             </PhoneNumberContainer>
             <Btn onClick={register}>Зарегистрироваться</Btn>
             <p>
-                Уже зарегистрированы? <span onClick={() => setIsRegister(false)}>Войти</span>
+                Уже зарегистрированы? <span onClick={() => setIsRegister(true)}>Войти</span>
             </p>
         </AuthWrapper>
     ) : (
@@ -98,7 +98,7 @@ export const Profile = () => {
             <Btn onClick={loginAuth}>Войти</Btn>
             <p>
                 Ещё не зарегистрированы?
-                <span onClick={() => setIsRegister(true)}>Зарегистрироваться</span>
+                <span onClick={() => setIsRegister(false)}>Зарегистрироваться</span>
             </p>
         </AuthWrapper>
     );

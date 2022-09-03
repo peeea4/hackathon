@@ -7,7 +7,7 @@ import { ProductItem } from "../ProductItem";
 import { List, NewProductsWrapper, Title } from "./styled";
 
 export const NewProducts = () => {
-    const productList = useSelector((state) => state.productList.productList).reverse().slice(0, 6);
+    const productList = useSelector((state) => state.productList.productList).slice(0, 6);
     const dispatch = useDispatch();
 
     useEffect(() => {

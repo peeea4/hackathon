@@ -5,5 +5,5 @@ export const LayoutWrapper = styled.div`
     height: 100%;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 5% auto 20%;
+    grid-template-rows: 8% auto 20%;
 `;

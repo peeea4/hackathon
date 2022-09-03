@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const CategoryItemWrapper = styled.div`
     cursor: pointer;
+    margin-top: 40px;
 `;
 
 export const Image = styled.img`

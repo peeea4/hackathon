@@ -13,7 +13,7 @@ export const createUser = (user) => {
 
 export const login = (user) => {
     return async (dispatch) => {
-        const response = await axios.post(`${url}/user/login`, user);
+        const response = await axios.get(`${url}/user/login`, user);
         console.log(response, "action");
         dispatch({ type: CREATE_USER, payload: response.data });
     };

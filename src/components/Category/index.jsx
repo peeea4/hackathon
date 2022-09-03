@@ -21,7 +21,7 @@ export const Category = () => {
             <Title>Категории</Title>
             <ListOfCategory>
                 {categoryList.map((item) => (
-                    <CategoryItem key={item.id} item={item} />
+                    <CategoryItem  key={item.id} item={item} />
                 ))}
             </ListOfCategory>
         </CategoryWrapper>
