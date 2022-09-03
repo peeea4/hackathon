@@ -1,4 +1,4 @@
-import { GET_PRODUCT_LIST, GET_USER } from "@/constants/actions";
+import { CREATE_USER } from "@/constants/actions";
 
 const defaultState = {
     user: {},
@@ -6,10 +6,10 @@ const defaultState = {
 
 export const userReducer = (state = defaultState, action) => {
     switch (action.type) {
-        case GET_USER:
+        case CREATE_USER:
             return {
                 ...state,
-                user: [...state.productList, ...action.payload],
+                user: action.payload,
             };
         default:
             return state;

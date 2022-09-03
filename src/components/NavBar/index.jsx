@@ -9,6 +9,7 @@ export const NavBar = () => {
                 <NavLink to="home">Главная</NavLink>
                 <NavLink to="about">О компании</NavLink>
                 <NavLink to="profile">Личный кабинет</NavLink>
+                <NavLink to="catalog">Каталог</NavLink>
             </Links>
             <Info>
                 <Delivery>Доставка с 8:00 до 23:00</Delivery>

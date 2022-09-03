@@ -10,4 +10,6 @@ export const GET_ID_PRODUCT = "GET_ID_PRODUCT";
 
 export const DELETE_ID_PRODUCT = "DELETE_ID_PRODUCT";
 
-export const GET_USER = "GET_USER";
+export const CREATE_USER = "CREATE_USER";
+
+export const GET_FILTERED_LIST = "GET_FILTERED_LIST";

@@ -12,5 +12,6 @@ export const ListOfCategory = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    row-gap: 30px;
+    row-gap: 40px;
+    margin-bottom: 40px;
 `;
